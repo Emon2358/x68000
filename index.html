@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>X68000 Emulator - Z-Music System</title>
+    <style>
+        body {
+            background-color: #111; /* 背景を暗くして画面を見やすくします */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="width:640px; height:480px; max-width:100%">
+        <div id="game"></div>
+    </div>
+
+    <script type="text/javascript">
+        EJS_player = '#game';
+        
+        // 指定されたBIOSファイルのRAW URL
+        EJS_biosUrl = 'https://raw.githubusercontent.com/Emon2358/x68000/main/Iplrom.dat'; 
+        
+        // 指定されたZ-Music Systemのディスク(1〜6)のRAW URL
+        EJS_gameUrl = [
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%201).hdm',
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%202).hdm',
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%203).hdm',
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%204).hdm',
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%205).hdm',
+            'https://raw.githubusercontent.com/Emon2358/x68000/main/Z-Music%20System%202.0%20(Disk%206).hdm'
+        ];
+        
+        EJS_core = 'px68k';
+
+        // --- パフォーマンス向上のための推奨設定 ---
+        EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/';
+
+    </script>
+    <script src="https://www.emulatorjs.com/loader.js"></script>
+
+</body>
+</html>
